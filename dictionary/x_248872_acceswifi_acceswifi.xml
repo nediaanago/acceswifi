@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Acceswifi" max_length="40" name="x_248872_acceswifi_acceswifi" type="collection">
+        <element label="Beneficiaire" max_length="100" name="beneficiaire" type="string"/>
+        <element label="Code wifi" max_length="100" name="code_wifi" type="string"/>
+        <element label="Collaborateur" mandatory="true" max_length="100" name="collaborateur" type="string"/>
+        <element label="Date" mandatory="true" max_length="100" name="date" type="glide_date"/>
+        <element label="Demandeur" max_length="100" name="demandeur" type="string"/>
+        <element choice="1" label="Duree de validite" mandatory="true" max_length="100" name="duree_de_validite" type="choice">
+            <choice>
+                <element label="1 Jour" sequence="0" value="1 jour"/>
+                <element label="2 Jours" sequence="1" value="2 jours"/>
+                <element label="1 Semaine" sequence="2" value="1 semaine"/>
+            </choice>
+        </element>
+        <element label="Email" mandatory="true" max_length="100" name="email" type="string"/>
+        <element label="Nom" mandatory="true" max_length="100" name="nom" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Prenom" mandatory="true" max_length="100" name="prenom" type="string"/>
+        <element label="Societe" mandatory="true" max_length="100" name="societe" type="string"/>
+        <element choice="3" default="demande en cours" label="Etat" max_length="100" name="statut" type="choice">
+            <choice>
+                <element label="Demande en cours" sequence="0" value="demande en cours"/>
+                <element label="Demandes traités" sequence="1" value="demandes traités"/>
+                <element label="Tous" sequence="2" value="tous"/>
+            </choice>
+        </element>
+        <element choice="3" label="Type de beneficiaire" mandatory="true" max_length="100" name="type_de_beneficiaire" type="choice">
+            <choice>
+                <element label="Collaborateur" sequence="0" value="collaborateur"/>
+                <element label="Invité" sequence="1" value="invité"/>
+            </choice>
+        </element>
+    </element>
+</database>
